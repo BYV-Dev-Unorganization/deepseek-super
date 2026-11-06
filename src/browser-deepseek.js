@@ -768,7 +768,7 @@ async function saveAuthState() {
     try {
         await saveStorageState(ctx, AUTH_STATE_PATH, 'deepseek');
     } catch (error) {
-        console.warn('[deepseek-auth] could not save Incognito session backup: ' + (error.message || String(error)));
+        console.warn('[deepseek-auth] could not save regular Chrome session backup: ' + (error.message || String(error)));
     }
 }
 
