@@ -471,7 +471,7 @@ async function saveAuthState() {
   try {
     await saveStorageState(ctx, AUTH_STATE_PATH, 'qwen');
   } catch (error) {
-    console.warn('[qwen-auth] could not save Incognito session backup: ' + (error.message || String(error)));
+    console.warn('[qwen-auth] could not save regular Chrome session backup: ' + (error.message || String(error)));
   }
 }
 
