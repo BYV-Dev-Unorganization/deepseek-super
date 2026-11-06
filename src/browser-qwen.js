@@ -73,6 +73,11 @@ async function ensurePage() {
       const newContext = await chromium.launchPersistentContext(PROFILE_DIR, {
         headless: false,
         channel: 'chrome',
+        args: [
+          '--disable-blink-features=AutomationControlled',
+        ],
+        ignoreDefaultArgs: ['--enable-automation'],
+        chromiumSandbox: true,
         viewport: { width: 1280, height: 900 },
       });
 
